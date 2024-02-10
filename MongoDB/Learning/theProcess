@@ -1,0 +1,28 @@
+1.For version checking: mongos --version
+
+2. for shell:
+    mongosh
+
+3.create database: 
+         use name(database)
+
+4.show dbs
+
+5.To get new documents,we need to create collections for this,use:
+   db.first_data.insertOne({name:"REACT JS",type:"Front End",videos:80,active:true})...blah blah blah
+
+6.To check active database:
+   show collections
+
+7.to check the documents of the collection:
+     db.name(..).find()
+    here name=the name of the collection
+
+
+#### database--->collection--->documents
+
+
+
+
+
+
