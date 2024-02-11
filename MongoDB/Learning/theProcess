@@ -22,6 +22,53 @@
 #### database--->collection--->documents
 
 
+8.To get only one data as a output
+   db.collection_name.find(query,projection)
+  
+example: 
+  learnMongo> db.first_data.find({name:"NODE JS"})
+[
+  {
+    _id: ObjectId('65c7cf535d68fa4a94175189'),
+    name: 'NODE JS',
+    type: 'Back End',
+    videos: 5,
+    active: true
+  }
+]
+
+
+
+9.Just one name field
+     db.first_data.find({name:"NODE JS"},{name:1})
+10.NOT to show the field
+     db.first_data.find({name:"NODE JS"},{name:0})
+
+11.with id
+    learnMongo> db.first_data.find({name:"NODE JS"},{name:1})
+     [ { _id: ObjectId('65c7cf535d68fa4a94175189'), name: 'NODE JS' } ]
+12.without id
+   learnMongo> db.first_data.find({name:"NODE JS"},{_id:0,name:1})
+   [ { name: 'NODE JS' } ]
+
+
+13.TO get the 1st field
+    db.first_data.find({name:"REACT JS"}).limit(1)
+                                     -----------------
+                                      gonna be varied
+or,
+ db.first_data.findOne({name:"REACT JS"})
+
+
+14.TO get a field skip previous ones
+      db.first_data.find({name:"REACT JS"}).limit(1).skip(1)
+                                          -----------------
+                                             gonna be varied
+
+15.to delete
+    db.first_data.deleteOne({type:"Front End"})
+
+
 
 
 
